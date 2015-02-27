@@ -1,4 +1,4 @@
-# io.py: Loads data from csv/database into python session
+# load_data.py: Loads data from csv/database into python session
 # (Highly recommend pandas DataFrame).
 #
 # Your I/O file should be responsible for loading any data required for your
