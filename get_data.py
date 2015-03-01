@@ -36,6 +36,8 @@ def validate_url(url):
 print "Downloading mboxs..."
 total_mbox = len(years) * len(months)
 
+
+# TODO: Refactor of this file (Issue #1)
 ## Download Files
 pbar = ProgressBar(maxval=total_mbox).start()
 ii = 0
@@ -51,7 +53,6 @@ for year in years:
 pbar.finish()          
 
 ## Extract Files
-# TODO: Once downloaded I should use the list of files to extract instead of for loops
 print "Extracting files...."
 pbar = ProgressBar(maxval=total_mbox).start()
 ii = 0

@@ -74,12 +74,12 @@ writer = csv.writer(f, quoting=csv.QUOTE_ALL)
 writer.writerow(["member", "user_name", "subject", "date", "reply_date","amount_of_replies","domain"])
 pbar = ProgressBar(maxval=len(mail_box)).start()
 for i, message in enumerate(mail_box):
-    #TODO: utf-8 encoding for subjects
+    #TODO: utf-8 encoding for subjects (ISSUE #3)
     subject = decode_header(message['subject']) #[8:] to remove [pyar] 
     member = email.utils.parseaddr(message['from'])[0]
     user_name = email.utils.parseaddr(message['from'])[1]
     domain = get_domain(message)
-    #TODO: payload = get_payload(message)
+    #TODO: payload = get_payload(message) (ISSUE #4)
     date = message['date']
     reply_dates = get_message_reply_dates(message)
     if not reply_dates:
