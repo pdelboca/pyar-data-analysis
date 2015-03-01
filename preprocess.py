@@ -61,8 +61,9 @@ def decode_header(headervalue):
         return val 
         
 print "Reading mbox file and creating object..."
-mbox_path = path + '/data/data.txt'
+mbox_path = path + '/data/mbox.txt'
 mail_box = mailbox.mbox(mbox_path)
+
 
 print "Starting to write the csv file..."
 csv_path = path + '/data/pyar.csv'
